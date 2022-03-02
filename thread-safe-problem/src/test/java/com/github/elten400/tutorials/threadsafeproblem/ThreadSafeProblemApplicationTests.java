@@ -59,10 +59,11 @@ class ThreadSafeProblemApplicationTests {
         wrongNumbers.join();
         rightNumber.join();
 
-        List<Integer> results = values.stream().filter(v -> v <= 30).collect(Collectors.toList());
+        List<Integer> numberBelow30 = values.stream().filter(v -> v <= 30)
+                .collect(Collectors.toList());
 
-        System.out.println("Accepted wrong numbers: " + results);
-        Assertions.assertThat(results).hasSizeGreaterThan(0);
+        System.out.println("Accepted wrong numbers: " + numberBelow30);
+        Assertions.assertThat(numberBelow30).hasSize(0);
     }
 
 }
