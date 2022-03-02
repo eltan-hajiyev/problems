@@ -63,6 +63,7 @@ class ThreadSafeProblemApplicationTests {
                 .collect(Collectors.toList());
 
         System.out.println("Accepted wrong numbers: " + numberBelow30);
+        Assertions.assertThat(values).hasSizeGreaterThan(4);
         Assertions.assertThat(numberBelow30).hasSize(0);
     }
 
