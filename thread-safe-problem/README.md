@@ -1,5 +1,5 @@
 Custom validation:
-[NumberConstraintValidator](src/main/java/com/github/elten400/tutorials/threadsafeproblem/validation/NumberConstraintValidator.java)
+[NumberConstraintValidator](src/main/java/com/github/elten400/tutorials/threadsafeproblem/validation/NumberConstraintValidator.java).
 It should reject a number above 30.
 
 Controller class with our custom validation:
