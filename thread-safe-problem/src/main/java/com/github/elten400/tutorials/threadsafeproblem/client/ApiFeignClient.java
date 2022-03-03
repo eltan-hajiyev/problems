@@ -1,7 +1,6 @@
 package com.github.elten400.tutorials.threadsafeproblem.client;
 
 
-import com.github.elten400.tutorials.threadsafeproblem.validation.NumberConstraint;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,5 +9,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ApiFeignClient {
 
     @GetMapping
-    Integer method(@RequestParam @NumberConstraint Integer num);
+    Integer method(@RequestParam Integer num);
 }
