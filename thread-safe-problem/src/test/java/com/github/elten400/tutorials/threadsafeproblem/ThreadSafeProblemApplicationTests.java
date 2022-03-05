@@ -13,6 +13,8 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class ThreadSafeProblemApplicationTests {
 
@@ -63,8 +65,8 @@ class ThreadSafeProblemApplicationTests {
                 .collect(Collectors.toList());
 
         System.out.println("Accepted wrong numbers: " + numberBelow30);
-        Assertions.assertThat(values).hasSizeGreaterThan(4);
-        Assertions.assertThat(numberBelow30).hasSize(0);
+        assertThat(values).hasSizeGreaterThan(4);
+        assertThat(numberBelow30).hasSize(0);
     }
 
 }
